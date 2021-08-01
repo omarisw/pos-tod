@@ -7,7 +7,7 @@
     'author': 'TOD SAS',
     'website': 'www.tod.com.mx',
     'license': 'AGPL-3',
-    'depends': ['hw_drivers'],
+    'depends': ['base'],
     'data': [
     ],
     'installable': True,
