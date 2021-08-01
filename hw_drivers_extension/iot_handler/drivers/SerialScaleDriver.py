@@ -13,7 +13,6 @@ from odoo.addons.hw_drivers.controllers.proxy import proxy_drivers
 from odoo.addons.hw_drivers.event_manager import event_manager
 from odoo.addons.hw_drivers.iot_handlers.drivers.SerialBaseDriver import SerialDriver, SerialProtocol, serial_connection
 
-
 _logger = logging.getLogger(__name__)
 
 # Only needed to ensure compatibility with older versions of Odoo
@@ -21,11 +20,6 @@ ACTIVE_SCALE = None
 new_weight_event = threading.Event()
 
 ScaleProtocol = namedtuple('ScaleProtocol', SerialProtocol._fields + ('zeroCommand', 'tareCommand', 'clearCommand', 'autoResetWeight'))
-# added scale
-# manufacturer : torrey
-# model: SR-50
-# description: BASCULAS ELECTRÓNICAS PARA PAQUETERÍAS
-# developer: Jhonny Salvatierra Roca
 TorreyProtocol = ScaleProtocol(
     name='Torrey SR-50',
     baudrate=9600,
